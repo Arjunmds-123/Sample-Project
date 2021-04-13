@@ -1,27 +1,18 @@
-# SampleProject
+This project is built on Angular 11.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+To run this project, you have to install the Git, node on your system.
 
-## Development server
+For installing the Git, click on the following link https://github.com/git-for-windows/git/releases/download/v2.31.1.windows.1/Git-2.31.1-64-bit.exe
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For installing the node, click on the following link https://nodejs.org/en/download/
+install the node according to your system.
 
-## Code scaffolding
+To run the project, open the SAMPLEPROJECT folder in VS Code and run the folowing command: npm start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project contains many components like header, container-area, footer components and etc.
 
-## Build
+It uses the dummy APIs from "http://dummy.restapiexample.com/" service end point.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+In here, we can view employee details, update employee details, add new employee and delete the existing employee.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Also, we can search the employee by employee name.

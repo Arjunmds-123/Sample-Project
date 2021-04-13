@@ -88,8 +88,7 @@ export class ContainerAreaComponent implements OnInit {
       isOnlyForView: true
     };
     modalRef.result.then((resp: any) => {
-      if (resp)
-        this.getAllEmployees();
+      
     });
   }
 

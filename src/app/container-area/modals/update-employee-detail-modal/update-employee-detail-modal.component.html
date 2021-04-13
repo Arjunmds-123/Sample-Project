@@ -32,18 +32,23 @@
         </div>
       </div>
     </div>
-    <div class="modal-footer d-block">
+    <div class="modal-footer d-block" *ngIf="!isOnlyForView">
       <ul class="footer-Action">
         <li><button class="btn btn-link text-left" data-dismiss="modal" (click)="closeModal()">Close</button></li>
         <li>
           <div class="details">
             <div class="btn-listLink">
-              <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal" disabled="isOnlyForView" (click)="updateEmployeeData()">
+              <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal" (click)="updateEmployeeData()">
                 Submit
               </button>
             </div>
           </div>
         </li>
+      </ul>
+    </div>
+    <div class="modal-footer d-block" *ngIf="isOnlyForView">
+      <ul class="footer-Action">
+        <li class="close-btn"><button class="btn btn-link text-right" data-dismiss="modal" (click)="closeModal()">Close</button></li>
       </ul>
     </div>
   </form>

@@ -2479,6 +2479,11 @@ fieldset:disabled a.btn {
   cursor: not-allowed;
 }
 
+.close-btn {
+  width: 100% !important;
+  display: block !important;
+}
+
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
