@@ -1,0 +1,39 @@
+<div class="row text-center mg-b20">
+  <div class="col-lg-12">
+    <button class="btn btn-primary" (click)="createNewEmployee()">+Add New Employee</button>
+  </div>
+</div>
+<div class="table-responsive" *ngIf="employeesData.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">Employee Id</th>
+        <th class="text-center">Employee Name</th>
+        <th class="text-center">Employee's Age</th>
+        <th class="text-center">Employee's Salary</th>
+        <th>&nbsp;</th>
+        <th>Actions</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="employeesData && employeesData.length > 0">
+      <tr *ngFor="let employee of employeesData; let i = index">
+        <td class="text-center">{{employee.id}}</td>
+        <td class="text-center">{{employee.employee_name}}</td>
+        <td class="text-center">{{employee.employee_age}}</td>
+        <td class="text-center">{{employee.employee_salary}}</td>
+        <td class="text-center">
+          <button class="btn btn-link px-0 py-0" (click)="openViewEmployeeDetail(employee)">View</button>
+        </td>
+        <td class="text-center">
+          <button class="btn btn-link px-0 py-0" (click)="updateEmployeeDetail(employee)">Update</button>
+        </td>
+        <td class="text-center">
+          <button class="btn btn-link px-0 py-0" (click)="deleteEmployee(employee.id, i)">Delete</button>
+          <!--<button class="btn btn-link px-0 py-0 disabled" *ngIf="!approveTimesheetPermission" placement="bottom" ngbPopover="You do not have enough permissions for Approve / Reject" triggers="mouseenter:mouseleave">Accept / Reject</button>-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br /><span *ngIf="employeesData.length === 0">No Records Found.</span>

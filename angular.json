@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "eae5272d-cae5-417b-a1fc-5c34b8282591"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -24,13 +27,20 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
+              "src/content",
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/content/css/global.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,7 +103,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts"
+            ]
           }
         },
         "lint": {
